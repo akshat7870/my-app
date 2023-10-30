@@ -1,5 +1,6 @@
 // import React from "react"; // props method
 import React, {useState} from 'react' //State
+import './TextForm.css';
 
 export default function TextForm(props) { // conver to Uppercase
     const handleUpClick = () =>{ // console.log("Uppercase was clicked" + text); //cleen console
@@ -52,8 +53,8 @@ export default function TextForm(props) { // conver to Uppercase
     <h2>Your text summary</h2>
     <p>{text.split(" ").length} words and {text.length} characters</p>
     <p>{0.008 * text.split (" ").length} Minute read</p>
-    <h2>Preview</h2>
-    <p>{text.length>0?text:"Enter something in the textbox about to preview it here"}</p>
+    <h2 className='Preview'>Preview</h2>
+    <p className='textbox'>{text.length>0?text:"Enter something in the textbox about to preview it here."}</p>
 </div>
 </>
   )
